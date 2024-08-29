@@ -1,3 +1,5 @@
+// models/users.js
+
 const { Sequelize, DataTypes } = require('sequelize');
 const sequelize = require('../config/config');
 
@@ -11,6 +13,8 @@ const User = sequelize.define('User', {
         type: DataTypes.STRING,
         allowNull: false
     }
+}, {
+    tableName: 'users'  // Specify the table name explicitly
 });
 
 module.exports = { User };
